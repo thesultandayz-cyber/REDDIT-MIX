@@ -1,0 +1,9 @@
+{
+  "name": "vercel-mux-merge",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@mux/mux-node": "^12.4.0"
+  }
+}

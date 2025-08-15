@@ -1,0 +1,25 @@
+{
+  "parameters": {
+    "url": "https://api.openai.com/v1/audio/speech",
+    "method": "POST",
+    "authentication": "none",
+    "sendBody": true,
+    "jsonParameters": true,
+    "options": {
+      "response": {
+        "responseFormat": "file",
+        "binaryPropertyName": "audio",
+        "fileName": "voiceover.mp3"
+      }
+    },
+    "headerParametersJson": "={\"Authorization\":\"Bearer YOUR_OPENAI_API_KEY\",\"Content-Type\":\"application/json\"}",
+    "bodyParametersJson": "={\"model\":\"gpt-4o-mini-tts\",\"voice\":\"alloy\",\"input\":\"{{$json.quote}}\",\"format\":\"mp3\"}"
+  },
+  "name": "OpenAI TTS (HTTP)",
+  "type": "n8n-nodes-base.httpRequest",
+  "typeVersion": 1,
+  "position": [
+    800,
+    300
+  ]
+}
